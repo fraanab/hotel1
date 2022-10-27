@@ -97,6 +97,7 @@ header img{
     height: 35vh;
     background: url('../images/room6.jpg');
     background-position: 0 -300px;
+    background-repeat: no-repeat; 
     background-size: cover;
 
     display: flex;
@@ -311,6 +312,116 @@ body{
 }
 
 
+@media (max-width: 1024px){
+    .our-rooms{
+        background-position: 0 -100px;
+        background-repeat: no-repeat; 
+    }
+    
+    header{
+        width: 100%;;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        position: relative;
+        background: var(--white);
+        z-index: 20;
+    }
+    #nav-btn{
+        display: flex;
+        position: fixed;
+        right: 25px;
+        font-size: 2.5rem;
+        transition: .3s;
+        z-index: 999;
+        color: #000;
+        opacity: 0.7;
+    }
+    #nav-btn:hover{
+        opacity: 1;
+    }
+    #nav-btn::after{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: var(--white);
+        content: '≡';
+        border-radius: 5px;
+    }
+    #nav-btn:active::after{
+        content: '≡';
+        font-size: 3rem;
+    }
+    #nav-bar{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: -999px;
+        left: 0;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        margin: 0;
+        height: 100vh;
+    }
+    #nav-bar a{
+        /* padding: 90px auto; */
+        height: 3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-shadow: 0 1.5px 1px #000;
+    }
+    #nav-bar a:hover{
+        background: var(--white);
+        color: #000;
+        text-shadow: none;
+    }
+    header img{
+        width: 32px;
+    }
+
+    .rates{
+        background-position-y: 0px;
+    }
+}
+
+
+@media (max-width: 768px){
+    
+    .ratesA,.ratesB{
+        display: flex;
+        flex-direction: column;
+    }
+    .rate{
+        z-index: 2;
+        padding: 30px;
+        margin: 5px;
+        color: #000;
+        width: 100vw;
+        height: 200px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+        transition: .3s;
+    
+        background: rgba(204, 197, 185, 0.30);
+    }
+    .rate:hover{
+        transform: scale(1);
+    }
+}
 
 
 @media (max-width: 550px) {
@@ -387,6 +498,10 @@ body{
     }
 
     
+    .our-rooms{
+        background-position: 0;
+        background-repeat: no-repeat; 
+    }
 
 
     .rates{
